@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Amar Design - Coming Soon</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Glavni CSS fajl -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Font-->
+  <link href="css/circular-std.css" rel="stylesheet">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/favicon_new.png">
+
+</head>
+
+<body>
+
+  <!-- Body stranice -->
+  <div class="view">
+
+    <!-- Mask & Flexbox-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+      <!-- Sadrzaj -->
+      <div class="text-center white-text mx-5 wow fadeIn">
+
+        <h1 class="title display-4 mb-4">
+          <strong>Coming Soon!</strong>
+        </h1>
+        <div class="title-line-center"></div>
+
+        <!-- Odbrojavanje vremena -->
+        <p id="time-counter" class="my-4"></p>
+
+        <h4 class="mb-4">
+          <strong>I'm working hard to finish the development of this site. <br> Until then, have a look at my portfolio
+            on my Dribbble page</strong>
+        </h4>
+
+        <a target="_blank" href="https://www.dribbble.com/amarcaht" class="btn-custom" role="button">Dribbble
+          <i class=" fa fa-dribbble ml-2"></i>
+        </a>
+      </div>
+      <!-- Sadrzaj -->
+
+    </div>
+    <!-- Mask & Flexbox-->
+
+  </div>
+  <!-- Body stranice -->
+
+  <!-- SKRIPTE -->
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+
+  <!-- Odbrojavanje -->
+  <script type="text/javascript">
+    var countDownDate = new Date();
+    countDownDate.setDate(countDownDate.getDate() + 30);
+
+    var x = setInterval(function () {
+
+      var now = new Date().getTime();
+
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("time-counter").innerHTML = days + "d " + hours + "h " +
+        minutes + "m " + seconds + "s";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("time-counter").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
